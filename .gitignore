@@ -1,0 +1,18 @@
+# cache python files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.ipynb_checkpoints/
+
+# Environnements
+venv/
+.env
+
+# Voluminous data
+data/raw/
+data/tokenizer/
+
+# OS
+.DS_Store
+Thumbs.db

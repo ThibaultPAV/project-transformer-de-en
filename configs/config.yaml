@@ -1,0 +1,42 @@
+# configs/base.yaml
+seed: 42 # use in data/prepare_data.py
+
+paths:
+ 
+  data_raw: data/raw # use in data/prepare_data.py
+  tokenizer_dir: data/tokenizer # use in data/train_tokenizer.py
+
+data:
+  max_len: 64 # use in test.py and train.py
+  train_samples: 10000  # use in data/prepare_data.py
+  batch_size: 32 # use in test.py and train.py
+
+tokenizer:
+  vocab_size: 8000 # use in data/train_tokenizer.py
+  file: ${paths.tokenizer_dir}/bpe.json  # use in test.py and train.py
+
+model:
+  d_model: 128 # use in test.py and train.py
+  nhead: 4 # use in test.py and train.py
+  layers: 2 # use in test.py and train.py
+  ff: 256 # use in test.py and train.py
+
+optim:
+  lr: 1.0 # use in train.py  
+  betas: [0.9, 0.98] # use in train.py
+  eps: 1.0e-9 # use in train.py
+  warmup: 2000 # use in train.py
+
+train:
+  epochs_max: 10 # use in train.py
+  save_every_steps: 100  # use in train.py
+  label_smoothing: 0.1# use in train.py
+  early_stopping:
+    patience: 3  # use in train.py
+    min_delta: 1.0e-4  # use in train.py
+
+eval:
+  model_path: ${paths.checkpoints}/best_bleu.pt # use in test.py 
+
+test:
+  test_path: ${paths.data_raw}/test.jsonl  # use in test.py
