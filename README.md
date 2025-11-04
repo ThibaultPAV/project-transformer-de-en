@@ -191,5 +191,5 @@ python src/train.py model.d_model=512 train.epochs_max=5 data.batch_size=128
 ## **Author**
 
 Project developed as part of an application.
-Created and maintained by Thibaud PAWLISZ, 2025.
+Created and maintained by Thibault PAWLISZ, 2025.
 
