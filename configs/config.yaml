@@ -30,7 +30,7 @@ optim:
 train:
   epochs_max: 10 # use in train.py
   save_every_steps: 100  # use in train.py
-  label_smoothing: 0.1# use in train.py
+  label_smoothing: 0.1 # use in train.py
   early_stopping:
     patience: 3  # use in train.py
     min_delta: 1.0e-4  # use in train.py
