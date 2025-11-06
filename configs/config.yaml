@@ -2,10 +2,10 @@
 seed: 42 # use in data/prepare_data.py
 
 paths:
- 
+  checkpoints: checkpoints # use in test.py
   data_raw: data/raw # use in data/prepare_data.py
   tokenizer_dir: data/tokenizer # use in data/train_tokenizer.py
-
+  
 data:
   max_len: 64 # use in test.py and train.py
   train_samples: 10000  # use in data/prepare_data.py
